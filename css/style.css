@@ -1,0 +1,28 @@
+header {
+    display: flex;
+}
+
+/***** image logo (header) ****/
+.img-thumbnail {
+    width: 25%;
+    height: 15em;
+}
+
+nav {
+    background-image: url("../img/schema-ville.jpg");
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10%;
+    display: flex;
+}
+
+header ul li {
+    padding: 0 3em 0 3em;
+    text-align: center;
+}
+
+header ul li a {
+    text-decoration: none;
+}
