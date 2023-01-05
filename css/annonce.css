@@ -35,6 +35,22 @@ nav ul li {
     height: 28em;
 }
 
+/************ Aside **********s**/
+aside {
+    border: 4px solid black;
+    border-radius: 2em;
+    text-align: center;
+    float: right;
+}
+
+label{
+    color: black;
+}
+
+input {
+    border-color: black;
+}
+
 
 
 
