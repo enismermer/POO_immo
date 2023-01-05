@@ -8,21 +8,35 @@ header {
     height: 15em;
 }
 
-nav {
-    background-image: url("../img/schema-ville.jpg");
+/***** Barre de recherche ****/
+.container-fluid {
+    background-color: #CBBDC8;
+    border-radius: 5em;
 }
 
-nav ul {
-    list-style-type: none;
-    margin-top: 10%;
-    display: flex;
-}
-
-header ul li {
-    padding: 0 3em 0 3em;
+.nav-link {
     text-align: center;
 }
 
-header ul li a {
-    text-decoration: none;
+
+nav ul li {
+    padding: 0 4em 0 4em;
+}
+
+section {
+    
+}
+
+
+
+
+
+.footer {
+    background-color: #CBBDC8;
+    padding: 2em;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1em;
 }
