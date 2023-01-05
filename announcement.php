@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>POO Immo - register</title>
+    <title>POO Immo - announcement</title>
 </head>
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
@@ -43,7 +43,7 @@
     </header>
 
     <div class="title text-center mt-5">
-        <h1>Inscription</h1>
+        <h1>Annonce</h1>
         <hr class="pill">
     </div>
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
@@ -61,52 +61,87 @@
                         </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
-                                <label for="firstName" class="col-form-label">Prénom : </label>
+                                <label for="typeProperty" class="col-form-label">Type de bien : </label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" id="firstName" class="form-control" name="firstName">
+                                <input type="text" id="typeProperty" class="form-control" name="typeProperty">
                             </div>
                         </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
-                                <label for="email" class="col-form-label">Email : </label>
+                                <label for="surface" class="col-form-label">Surface : </label>
                             </div>
                             <div class="col-auto">
-                                <input type="email" id="email" class="form-control" name="email">
+                                <input type="text" id="surface" class="form-control" name="surface">
                             </div>
                         </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
-                                <label for="password" class="col-form-label">Mot de passe : </label>
+                                <label for="description" class="col-form-label">Description : </label>
                             </div>
                             <div class="col-auto">
-                                <input type="password" id="password" class="form-control" name="password">
+                                <input type="text" id="description" class="form-control" name="description">
                             </div>
                         </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
-                                <label for="phone" class="col-form-label">Téléphone : </label>
+                                <label for="price" class="col-form-label">Prix : </label>
                             </div>
                             <div class="col-auto">
-                                <input type="tel" id="phone" class="form-control" name="phone">
+                                <input type="number" id="price" class="form-control" name="price">
                             </div>
                         </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
-                                <label for="age" class="col-form-label">Age : </label>
+                                <label for="adress" class="col-form-label">Adresse : </label>
                             </div>
                             <div class="col-auto">
-                                <input type="number" id="age" class="form-control" name="age">
+                                <input type="text" id="adress" class="form-control" name="adress">
                             </div>
                         </div>
-                        <select name="sexe" class="form-select selectRegister mt-4" id="floatingSelect"
-                            aria-label="Floating label select example">
-                            <option selected>Sexe</option>
-                            <option value="1">Homme</option>
-                            <option value="2">Femme</option>
-                            <option value="3">Non binaire</option>
-                        </select>
-                        <button type="button" class="btn btn-primary mt-5">S'inscrire</button>
+                        <div class="row g-3 align-items-center mt-1">
+                            <div class="col-auto">
+                                <label for="postalCode" class="col-form-label">Code Postal : </label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" id="postalCode" class="form-control" name="postalCode">
+                            </div>
+                        </div>
+                        <div class="row g-3 align-items-center mt-1">
+                            <div class="col-auto">
+                                <label for="dateSale" class="col-form-label">Date de mise en vente : </label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="date" id="dateSale" class="form-control" name="dateSale">
+                            </div>
+                        </div>
+                        <div class="row g-3 align-items-center mt-1">
+                            <div class="col-auto">
+                                <label for="propertyEmail" class="col-form-label">Email propriétaire : </label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="date" id="propretyEmail" class="form-control" name="propretyEmail">
+                            </div>
+                        </div>
+                        <div class="row g-3 align-items-center mt-1">
+                            <div class="col-auto">
+                                <label for="propertyPhone" class="col-form-label">Téléphone propriétaire : </label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" id="propertyPhone" class="form-control" name="propertyPhone">
+                            </div>
+                        </div>
+                        <div class="row g-3 align-items-center mt-1">
+                            <div class="col-auto">
+                                <label for="image" class="col-form-label">Image/Photo : </label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="image" class="form-control" name="image">
+                            </div>
+                        </div>
+
+
+                        <button type="button" class="btn btn-primary mt-5">S'Valider</button>
 
 
                     </form>

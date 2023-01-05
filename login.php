@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>POO Immo - register</title>
+    <title>POO Immo - Login</title>
 </head>
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
@@ -43,7 +43,7 @@
     </header>
 
     <div class="title text-center mt-5">
-        <h1>Inscription</h1>
+        <h1>Connexion</h1>
         <hr class="pill">
     </div>
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
@@ -51,22 +51,6 @@
             <div class="col">
                 <div class="registerBackColor">
                     <form methode="POST" action="">
-                        <div class="row g-3 align-items-center mt-2">
-                            <div class="col-auto">
-                                <label for="lastName" class="col-form-label">Nom : </label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="text" id="lastName" class="form-control" name="lastName">
-                            </div>
-                        </div>
-                        <div class="row g-3 align-items-center mt-1">
-                            <div class="col-auto">
-                                <label for="firstName" class="col-form-label">Prénom : </label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="text" id="firstName" class="form-control" name="firstName">
-                            </div>
-                        </div>
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-auto">
                                 <label for="email" class="col-form-label">Email : </label>
@@ -83,32 +67,9 @@
                                 <input type="password" id="password" class="form-control" name="password">
                             </div>
                         </div>
-                        <div class="row g-3 align-items-center mt-1">
-                            <div class="col-auto">
-                                <label for="phone" class="col-form-label">Téléphone : </label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="tel" id="phone" class="form-control" name="phone">
-                            </div>
-                        </div>
-                        <div class="row g-3 align-items-center mt-1">
-                            <div class="col-auto">
-                                <label for="age" class="col-form-label">Age : </label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="number" id="age" class="form-control" name="age">
-                            </div>
-                        </div>
-                        <select name="sexe" class="form-select selectRegister mt-4" id="floatingSelect"
-                            aria-label="Floating label select example">
-                            <option selected>Sexe</option>
-                            <option value="1">Homme</option>
-                            <option value="2">Femme</option>
-                            <option value="3">Non binaire</option>
-                        </select>
-                        <button type="button" class="btn btn-primary mt-5">S'inscrire</button>
-
-
+                        <button type="button" class="btn btn-primary mt-5">Se connecter</button>
+                        <a href="./register.php"><button type="button"
+                                class="btn btn-primary mt-5">S'inscrire</button></a>
                     </form>
                 </div>
             </div>
