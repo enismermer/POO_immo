@@ -1,3 +1,4 @@
+/************ Header *************/
 header {
     display: flex;
 }
@@ -23,14 +24,17 @@ nav ul li {
     padding: 0 4em 0 4em;
 }
 
-section {
-    
+/************ Section **********/
+
+/******* couleur des cartes image  *********/
+section .card {
+    background-color: #CBBDC8;
 }
 
 
 
 
-
+/*********** Footer ************/
 .footer {
     background-color: #CBBDC8;
     padding: 2em;
@@ -39,4 +43,5 @@ section {
 .footer p {
     text-align: center;
     font-size: 1em;
+    font-weight: bold;
 }
