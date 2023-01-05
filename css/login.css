@@ -1,0 +1,35 @@
+*{
+    margin :0;
+    padding :0;
+}
+
+:root{
+    --primary:#CBBDC8;
+}
+
+.selectRegister{
+width: 294px;
+}
+.registerBackColor{
+    display: flex;
+    background-color: var(--primary);
+    justify-content: center;
+    width: 120%;
+    padding: 2em;
+    border-radius: 40px;
+
+}
+.col{
+    text-align: center;
+}
+
+.pill {
+    display: flex;
+    height:0px;
+    border-radius: 2px;
+    color: #0d6efd;
+    color:#0d6efd;
+    border: 2px solid currentColor;
+    width: 80%;
+    margin-left: 12%;
+  }
