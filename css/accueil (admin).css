@@ -1,0 +1,74 @@
+/************ Header *************/
+header {
+    display: flex;
+}
+
+/***** image logo (header) ****/
+.img-thumbnail {
+    width: 25%;
+    height: 15em;
+}
+
+/***** Barre de recherche ****/
+.container-fluid {
+    background-color: #CBBDC8;
+    border-radius: 5em;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+
+nav ul li {
+    padding: 0 4em 0 4em;
+    font-weight: bold;
+}
+
+/************ Bouton vendre / déconnexion **********/
+
+.justify-content-end {
+    padding: 0 50px;
+}
+
+.justify-content-end .p-2 {
+    margin: 0 15px;
+    border-radius: 1em;
+}
+
+.justify-content-end a {
+    text-decoration: none;
+    color: black;
+}
+
+.vendre {
+    background-color: #FFDC27;
+    border-radius: 15px;
+}
+
+.deconnexion {
+    background-color: #09F166;
+    border-radius: 15px;
+}
+
+/************ Section **********/
+
+/******* couleur des cartes image  *********/
+section .card {
+    background-color: #CBBDC8;
+}
+
+
+
+
+/*********** Footer ************/
+.footer {
+    background-color: #CBBDC8;
+    padding: 2em;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
