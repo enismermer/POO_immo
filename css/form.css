@@ -6,6 +6,32 @@
 :root{
     --primary:#CBBDC8;
 }
+/************ Header *************/
+header {
+    display: flex;
+}
+
+/***** image logo (header) ****/
+.img-thumbnail {
+    width: 25%;
+    height: 15em;
+}
+
+/***** Barre de recherche ****/
+.container-fluid {
+    background-color: #CBBDC8;
+    border-radius: 5em;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+
+nav ul li {
+    padding: 0 4em 0 4em;
+    font-weight: bold;
+}
 
 .selectRegister{
 width: 294px;
@@ -33,3 +59,15 @@ width: 294px;
     width: 80%;
     margin-left: 12%;
   }
+
+  /*********** Footer ************/
+.footer {
+    background-color: #CBBDC8;
+    padding: 2em;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
