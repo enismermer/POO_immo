@@ -1,10 +1,9 @@
 <?php
-require("./Poo/LoginFormController.php");
+require("./Controllers/RegisterFormController.php");
 
-$loginform = new loginForm($_POST);
+$registerForm = new registerForm($_POST);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,30 +15,33 @@ $loginform = new loginForm($_POST);
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>POO Immo - Login</title>
+    <title>POO Immo - register</title>
 </head>
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
     <header>
         <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
-
     </header>
 
     <div class="title text-center mt-5">
-        <h1>Connexion</h1>
+        <h1>Inscription</h1>
         <hr class="pill">
     </div>
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form methode="POST" action="#">
+                    <form methode="POST" action="">
                         <?php
-                    echo $loginform->input('email');
-                    echo $loginform->inputPassword('password');
-                    echo $loginform->submit('send');
-                    echo $loginform->button();
-                    ?>
+                        echo $registerForm->lastName('lastName');
+                        echo $registerForm->firstName('firstName');
+                        echo $registerForm->email('email');
+                        echo $registerForm->password('password');
+                        echo $registerForm->phone('phone');
+                        echo $registerForm->age('age');
+                        echo $registerForm->sex('sex');
+                        echo $registerForm->button('send');
+                        ?>
                     </form>
                 </div>
             </div>

@@ -1,9 +1,7 @@
 <?php
-require("./Poo/RegisterFormController.php");
-
-$registerForm = new registerForm($_POST);
-
+use app\announcementForm;
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,8 +13,18 @@ $registerForm = new registerForm($_POST);
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>POO Immo - register</title>
+    <title>POO Immo - announcement</title>
 </head>
+
+
+<?php
+/* require('Controllers/Autoloader.php');
+Autoloader::register();*/
+require('./Controllers/AnnouncementFormController.php');
+$announcementForm = new announcementForm($_POST);
+?>
+
+
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
     <header>
@@ -24,7 +32,7 @@ $registerForm = new registerForm($_POST);
     </header>
 
     <div class="title text-center mt-5">
-        <h1>Inscription</h1>
+        <h1>Annonce</h1>
         <hr class="pill">
     </div>
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
@@ -33,14 +41,18 @@ $registerForm = new registerForm($_POST);
                 <div class="registerBackColor">
                     <form methode="POST" action="">
                         <?php
-                        echo $registerForm->lastName('lastName');
-                        echo $registerForm->firstName('firstName');
-                        echo $registerForm->email('email');
-                        echo $registerForm->password('password');
-                        echo $registerForm->phone('phone');
-                        echo $registerForm->age('age');
-                        echo $registerForm->sex('sex');
-                        echo $registerForm->button('send');
+                        echo $announcementForm->lastName('lastName');
+                        echo $announcementForm->typeProperty('typeProperty');
+                        echo $announcementForm->surface('surface');
+                        echo $announcementForm->desription('description');
+                        echo $announcementForm->price('price');
+                        echo $announcementForm->adress('adress');
+                        echo $announcementForm->postalCode('postalCode');
+                        echo $announcementForm->dateSale('dateSale');
+                        echo $announcementForm->propertyEmail('propertyEmail');
+                        echo $announcementForm->propertyPhone('propertyPhone');
+                        echo $announcementForm->picture('picture');
+                        echo $announcementForm->button('send');
                         ?>
                     </form>
                 </div>

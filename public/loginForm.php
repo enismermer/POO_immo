@@ -1,8 +1,6 @@
 <?php
-require('./Poo/AnnouncementFormController.php');
-$announcementForm = new announcementForm($_POST);
+use app\loginForm;
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,52 +12,36 @@ $announcementForm = new announcementForm($_POST);
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>POO Immo - announcement</title>
+    <title>POO Immo - Login</title>
 </head>
+<?php
+require("./Controllers/LoginFormController.php");
+
+$loginform = new loginForm($_POST);
+
+?>
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
     <header>
         <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
+
     </header>
 
     <div class="title text-center mt-5">
-        <h1>Annonce</h1>
+        <h1>Connexion</h1>
         <hr class="pill">
     </div>
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form methode="POST" action="">
+                    <form methode="POST" action="#">
                         <?php
-                        echo $announcementForm->lastName('lastName');
-                        echo $announcementForm->typeProperty('typeProperty');
-                        echo $announcementForm->surface('surface');
-                        echo $announcementForm->desription('description');
-                        echo $announcementForm->price('price');
-                        echo $announcementForm->adress('adress');
-                        echo $announcementForm->postalCode('postalCode');
-                        echo $announcementForm->dateSale('dateSale');
-                        echo $announcementForm->propertyEmail('propertyEmail');
-                        echo $announcementForm->propertyPhone('propertyPhone');
-                        echo $announcementForm->picture('picture');
-                        echo $announcementForm->button('send');
-                        ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    echo $loginform->input('email');
+                    echo $loginform->inputPassword('password');
+                    echo $loginform->submit('send');
+                    echo $loginform->button();
+                    ?>
                     </form>
                 </div>
             </div>
