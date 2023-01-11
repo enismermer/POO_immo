@@ -60,7 +60,7 @@
         <!----------- 1ère ligne ------------>
         <div class="d-flex justify-content-around">
             <div class="card" style="width: 18rem;">
-                <a href="annonce (admin).html" class="btn">
+                <a href="annonce_admin.php" class="btn">
                     <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
                     <div class="card-body">
                         <h5 class="card-title">Appartement n°1</h5>
@@ -70,7 +70,7 @@
                 </a>
             </div>
             <div class="card" style="width: 18rem;">
-                <a href="annonce (admin).html" class="btn">
+                <a href="annonce_admin.php" class="btn">
                     <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°2">
                     <div class="card-body">
                         <h5 class="card-title">Appartement n°2</h5>

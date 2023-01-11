@@ -3,7 +3,7 @@ require '../Controllers/RegisterFormController.php';
 include './config/BDConnexion.php' ;
 
 
-$registerForm = new registerForm($_POST);
+$registerForm = new RegisterFormController($_POST);
 
 ?>
 <!DOCTYPE html>
@@ -32,18 +32,11 @@ $registerForm = new registerForm($_POST);
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form methode="POST" action="">
-                        <?php
-                        echo $registerForm->lastName('lastName');
-                        echo $registerForm->firstName('firstName');
-                        echo $registerForm->email('email');
-                        echo $registerForm->password('password');
-                        echo $registerForm->phone('phone');
-                        echo $registerForm->age('age');
-                        echo $registerForm->sex('sex');
-                        echo $registerForm->button('send');
+
+                    <?php
+                        echo $registerForm->Register('lastName','firstName','email','password','phone','age','sex');
                         ?>
-                    </form>
+
                 </div>
             </div>
         </div>
