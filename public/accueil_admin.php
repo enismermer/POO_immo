@@ -42,9 +42,13 @@
     <br>
     <!-------------- Boutons vendre / déconnexion ----------------->
     <div class="d-flex justify-content-end mb-3">
-        <a href="#"><div class="p-2 bg vendre">Vendre</div></a>
-        <a href="#"><div class="p-2 bg deconnexion">Déconnexion</div></a>
-      </div>
+        <a href="./announcementForm.php">
+            <div class="p-2 bg vendre">Vendre</div>
+        </a>
+        <a href="#">
+            <div class="p-2 bg deconnexion">Déconnexion</div>
+        </a>
+    </div>
     <br>
     <br>
     <br>
@@ -53,7 +57,7 @@
       <!----------- 1ère ligne ------------>
       <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce123_admin.php" class="btn">
             <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
             <div class="card-body">
               <h5 class="card-title">Appartement n°1</h5>
@@ -63,7 +67,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce123_admin.php" class="btn">
             <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°2">
             <div class="card-body">
               <h5 class="card-title">Appartement n°2</h5>
@@ -73,7 +77,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce123_admin.php" class="btn">
             <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°3">
             <div class="card-body">
               <h5 class="card-title">Appartement n°3</h5>
@@ -88,7 +92,7 @@
       <!----------- 2ème ligne ------------>
       <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce4_admin.php" class="btn">
             <img src="img/2eme annonce.jpg" class="card-img-top" alt="appartement n°3">
             <div class="card-body">
               <h5 class="card-title">Appartement n°4</h5>
@@ -98,7 +102,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce5_admin.php" class="btn">
             <img src="img/3eme annonce.jpg" class="card-img-top" alt="appartement n°4">
             <div class="card-body">
               <h5 class="card-title">Appartement n°5</h5>
@@ -108,7 +112,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce6_admin.php" class="btn">
             <img src="img/4eme annonce.jpg" class="card-img-top" alt="appartement n°5" style="height: 11em;">
             <div class="card-body">
               <h5 class="card-title">Appartement n°6</h5>
@@ -123,7 +127,7 @@
       <!------------ 3eme ligne ------------>
       <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce789_admin.php" class="btn">
             <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
             <div class="card-body">
               <h5 class="card-title">Appartement n°7</h5>
@@ -133,7 +137,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce789_admin.php" class="btn">
             <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
             <div class="card-body">
               <h5 class="card-title">Appartement n°8</h5>
@@ -143,7 +147,7 @@
           </a>
         </div>
         <div class="card" style="width: 18rem;">
-          <a href="annonce_admin.html" class="btn">
+          <a href="annonce789_admin.php" class="btn">
             <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
             <div class="card-body">
               <h5 class="card-title">Appartement n°9</h5>

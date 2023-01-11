@@ -1,5 +1,4 @@
 <?php
-namespace App;
 class announcementForm {
     //champ nom 
     public function lastName($lastName){
