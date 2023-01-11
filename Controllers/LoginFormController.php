@@ -1,5 +1,4 @@
 <?php
-namespace app;
 class loginForm{
 
     //Champ email 

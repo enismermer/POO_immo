@@ -45,7 +45,7 @@
     <br>
     <!-------------- Boutons vendre / déconnexion ----------------->
     <div class="d-flex justify-content-end mb-3">
-        <a href="#">
+        <a href="./announcementForm.php">
             <div class="p-2 bg vendre">Vendre</div>
         </a>
         <a href="#">

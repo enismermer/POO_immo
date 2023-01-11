@@ -1,6 +1,9 @@
 <?php
-class registerForm{
-    //champ nom
+include 'FormController.php';
+use FormController;
+class RegisterForm extends addDB{
+    
+//champ nom
     public function lastName($lastName){
         echo '<div class="row g-3 align-items-center mt-2">
         <div class="col-auto">
@@ -79,7 +82,7 @@ class registerForm{
     }
 //button d'envoie du formulaire
     public function button ($send){
-        echo '<button type="button" name="'.$send.'" class="btn btn-primary mt-5">S\'inscrire</button>';
+        echo '<button type="submit" name="'.$send.'" class="btn btn-primary mt-5">S\'inscrire</button>';
     }
 
     

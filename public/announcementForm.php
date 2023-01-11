@@ -1,7 +1,7 @@
 <?php
-use app\announcementForm;
+require '../Controllers/AnnouncementFormController.php';
+$announcementForm = new announcementForm($_POST);
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,19 +12,8 @@ use app\announcementForm;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>POO Immo - announcement</title>
 </head>
-
-
-<?php
-/* require('Controllers/Autoloader.php');
-Autoloader::register();*/
-require('./Controllers/AnnouncementFormController.php');
-$announcementForm = new announcementForm($_POST);
-?>
-
-
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
 <main>
     <header>
