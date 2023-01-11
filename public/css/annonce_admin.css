@@ -15,13 +15,17 @@ header {
     border-radius: 5em;
 }
 
+.navbar {
+    width: 100%;
+}
+
 .nav-link {
     text-align: center;
 }
 
 
-nav ul li {
-    padding: 0 4em 0 4em;
+nav ul {
+    padding: 5% 5em 5% 4em;
     font-weight: bold;
 }
 
@@ -145,4 +149,86 @@ aside button {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
+}
+
+
+/*************** Responsive Mobile ****************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+    .navbar {
+        margin-top: 76%;
+        margin-left: -79%;
+    }
+
+    .container-fluid {
+        padding: 0% 0% 3% 10%;
+    }
+    
+    .d-flex {
+        margin-left: -77%;
+        margin-right: 39%;
+        margin-top: 21%;
+    }
+
+    .img-thumbnail {
+        width: 81%;
+        margin-right: -6%;
+        height: 20em;
+        margin-left: 26%;
+        padding: 0;
+    }
+
+    .justify-content-start {
+        float: left;
+        margin-left: 30%;
+    }
+
+    .justify-content-start a {
+        margin-top: -85px;
+        margin-left: 14%;
+    }
+
+    .justify-content-end {
+        margin-left: 83%;
+    }
+
+    .justify-content-end a {
+        margin-top: 30px;
+        margin-right: 25%;
+    }
+
+    section h1 {
+        text-align: center;
+        margin-left: 32%;
+    }
+
+    .img-annonce {
+        width: 126%;
+        height: 3%;
+    }
+
+    aside {
+        margin-top: 50px;
+        width: 93%;
+        margin-right: -15%;
+    }
+
+    .description {
+        margin-top: 115%;
+        margin-left: 6%;
+        text-align: center;
+        width: 61%;
+        font-size: 1em;
+        padding: 1% 10px 10px 10px;
+    }
+
+    .choix {
+        margin-top: 14%;
+        margin-right: -112px;
+        text-align: center;
+        padding: 4% 4%;
+    }
+
+    .footer {
+        width: 119%;
+    }
 }

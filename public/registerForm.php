@@ -1,5 +1,5 @@
 <?php
-require("./Controllers/RegisterFormController.php");
+require '../Controllers/RegisterFormController.php';
 
 $registerForm = new registerForm($_POST);
 

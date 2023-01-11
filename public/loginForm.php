@@ -15,7 +15,7 @@ use app\loginForm;
     <title>POO Immo - Login</title>
 </head>
 <?php
-require("./Controllers/LoginFormController.php");
+require '../Controllers/LoginFormController.php';
 
 $loginform = new loginForm($_POST);
 
@@ -37,11 +37,11 @@ $loginform = new loginForm($_POST);
                 <div class="registerBackColor">
                     <form methode="POST" action="#">
                         <?php
-                    echo $loginform->input('email');
-                    echo $loginform->inputPassword('password');
-                    echo $loginform->submit('send');
-                    echo $loginform->button();
-                    ?>
+                        echo $loginform->input('email');
+                        echo $loginform->inputPassword('password');
+                        echo $loginform->submit('send');
+                        echo $loginform->button();
+                        ?>
                     </form>
                 </div>
             </div>

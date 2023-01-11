@@ -103,13 +103,13 @@ class announcementForm {
     //champ téléphone propriétaire
     public function propertyPhone ($propertyPhone){
         echo'<div class="row g-3 align-items-center mt-1">
-                            <div class="col-auto">
-                                <label for="propertyPhone" class="col-form-label">Téléphone propriétaire : </label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="number" id="propertyPhone" class="form-control" name="'.$propertyPhone.'">
-                            </div>
-                        </div>';
+        <div class="col-auto">
+            <label for="propertyPhone" class="col-form-label">Téléphone propriétaire : </label>
+        </div>
+        <div class="col-auto">
+            <input type="number" id="propertyPhone" class="form-control" name="'.$propertyPhone.'">
+        </div>
+    </div>';
     }
     //champ image
     public function picture ($picture){
