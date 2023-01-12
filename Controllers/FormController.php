@@ -1,19 +1,19 @@
 <?php
 require('../config/BDConnexion.php');
 
-class addDB{
-public function addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex, $send){
-    if(isset($_POST[$send])){
-     if(!empty($_POST[$lastName]) && !empty($_POST[$firstName]) && !empty($_POST[$email])
-     && !empty($_POST[$password]) && !empty($_POST[$phone]) && !empty($_POST[$age]) 
-     && !empty($_POST[$sex])){
+class FormController{
+public function addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex){
+    if(isset($_POST['send'])){
+     if(!empty($_POST['lastName']) && !empty($_POST['firstName']) && !empty($_POST['email'])
+     && !empty($_POST['password']) && !empty($_POST['phone']) && !empty($_POST['age']) 
+     && !empty($_POST['sex'])){
         $lastName = htmlspecialchars($_POST[$lastName]);
         $firstName = htmlspecialchars($_POST[$firstName]);
         $email = htmlspecialchars($_POST[$email]);
         $password = sha1($_POST[$password]);
         $phone = htmlspecialchars($_POST[$phone]);
         $age = htmlspecialchars($_POST[$age]);
-        $sex =htmlspecialchars($_POST[$sex]);
+        $sex = htmlspecialchars($_POST[$sex]);
 
         $sql = 'INSERT INTO admin(nom, prenom, email, mot_de_passe, telephone, age, sexe)
         VALUES (:lastName, :firstName, :email, :password, :phone, :age, :sex)';
@@ -28,7 +28,7 @@ public function addRegister($lastName, $firstName, $email, $password, $phone, $a
         $query -> bindValue(':sex', $sex, PDO::PARAM_STR);
         
         $query -> execute();
-
+        header('Location:loginForm.php');
 
      }else{
         echo "Veuillez remplir tous les champs";
