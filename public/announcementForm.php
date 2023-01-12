@@ -1,6 +1,6 @@
 <?php
 require '../Controllers/AnnouncementFormController.php';
-$announcementForm = new announcementForm($_POST);
+$announcementForm = new AnnouncementFormController($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="fr">

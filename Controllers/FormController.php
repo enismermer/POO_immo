@@ -1,12 +1,12 @@
 <?php
 require('../config/BDConnexion.php');
 
-class addDB{
+class FormController{
 public function addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex){
     if(isset($_POST['send'])){
-     if(!empty($_POST['lastName']) && !empty($_POST['firstName']) && !empty($_POST['email'])
-     && !empty($_POST['password']) && !empty($_POST['phone']) && !empty($_POST['age']) 
-     && !empty($_POST['sex'])){
+     if(!empty($_POST[$lastName]) && !empty($_POST[$firstName]) && !empty($_POST[$email])
+     && !empty($_POST[$password]) && !empty($_POST[$phone]) && !empty($_POST[$age]) 
+     && !empty($_POST[$sex])){
         $lastName = htmlspecialchars($_POST[$lastName]);
         $firstName = htmlspecialchars($_POST[$firstName]);
         $email = htmlspecialchars($_POST[$email]);
@@ -36,5 +36,26 @@ public function addRegister($lastName, $firstName, $email, $password, $phone, $a
 }
 
 }
+public function log($email,  $password){
+   if(isset($_POST['send'])){
+      if(!empty($_POST[$email]) && !empty($_POST[$password])){
+         $email = htmlspecialchars($_POST[$email]);
+         $password = sha1($_POST[$password]);
+         $bdd=db();
+         $recupUser =$bdd->prepare('SELECT * FROM admin WHERE email = ? AND mot_de_passe = ?');
+         $recupUser -> execute(array($email,  $password));
+
+         if($recupUser->rowCount()>0){
+            $_SESSION[$email] = $email;
+            $_SESSION[$password] = $password;
+            $_SESSION['id'] = $recupUser->fetch()['id'];
+        }
+        header('Location:accueil_admin.php');
+      }else{
+         echo "Veuillez remplir tous les champs";
+      }
+   }
+}
+
 }
 ?>

@@ -1,10 +1,9 @@
 <?php
 require 'FormController.php';
-use addDB;
-class RegisterFormController extends addDB{
+class RegisterFormController extends FormController{
 //champ nom
     public function Register($lastName , $firstName, $email, $password, $phone, $age, $sex){
-        addDB::addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex);
+        FormController::addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex);
         echo '
         <form method="post" action="">
         <div class="row g-3 align-items-center mt-2">

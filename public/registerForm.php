@@ -3,6 +3,7 @@ require '../Controllers/RegisterFormController.php';
 include './config/BDConnexion.php' ;
 
 
+
 $registerForm = new RegisterFormController($_POST);
 
 ?>

@@ -13,7 +13,7 @@
 <?php
 require("../Controllers/LoginFormController.php");
 
-$loginform = new loginForm($_POST);
+$loginform = new LoginFormController($_POST);
 
 ?>
 <!-- FORMULAIRE D'INSCRIPTION ADMIN -->
@@ -31,12 +31,8 @@ $loginform = new loginForm($_POST);
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form methode="POST" action="#">
-                        <?php
-                    echo $loginform->input('email');
-                    echo $loginform->inputPassword('password');
-                    echo $loginform->submit('send');
-                    echo $loginform->button();
+                    <?php
+                    echo $loginform->input('email', 'mdp');
                     ?>
                     </form>
                 </div>
