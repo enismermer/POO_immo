@@ -54,7 +54,6 @@
     <br>
     <!---------------- Section ---------------->
     <section>
-<<<<<<< HEAD
       <!----------- 1ère ligne ------------>
       <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
@@ -64,17 +63,7 @@
               <h5 class="card-title">Appartement n°1</h5>
               <br>
               <h3>1515 €</h3>
-=======
-        <!----------- 1ère ligne ------------>
-        <div class="d-flex justify-content-around">
-            <div class="card" style="width: 18rem;">
-                <a href="annonce_admin.php" class="btn">
-                    <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°1</h5>
-                        <br>
-                        <h3>1515 €</h3>
-                    </div>
+              </div>
                 </a>
             </div>
             <div class="card" style="width: 18rem;">
@@ -96,33 +85,11 @@
                         <h3>1759 €</h3>
                     </div>
                 </a>
->>>>>>> 46ab4ada81599e752e7a7e34bcf4f59c4f2b3c64
             </div>
           </a>
         </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce123_admin.php" class="btn">
-            <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°2">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°2</h5>
-              <br>
-              <h3>1455 €</h3>
-            </div>
-          </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce123_admin.php" class="btn">
-            <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°3">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°3</h5>
-              <br>
-              <h3>1759 €</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <br>
-      <br>
+        <br>
+        <br>
       <!----------- 2ème ligne ------------>
       <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">

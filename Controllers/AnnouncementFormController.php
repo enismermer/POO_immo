@@ -1,5 +1,5 @@
 <?php
-class announcementForm {
+class AnnouncementFormController {
     //champ nom 
     public function lastName($lastName){
         echo '<div class="row g-3 align-items-center mt-2">
