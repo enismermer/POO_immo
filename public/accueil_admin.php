@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="card" style="width: 18rem;">
-                <a href="annonce_admin.php" class="btn">
+                <a href="annonce123_admin.php" class="btn">
                     <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°2">
                     <div class="card-body">
                         <h5 class="card-title">Appartement n°2</h5>
@@ -77,7 +77,7 @@
                 </a>
             </div>
             <div class="card" style="width: 18rem;">
-                <a href="annonce (admin).html" class="btn">
+                <a href="annonce123_admin.php" class="btn">
                     <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°3">
                     <div class="card-body">
                         <h5 class="card-title">Appartement n°3</h5>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POO Immo - Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/annonce.css" type="text/css">
+    <link rel="stylesheet" href="css/annonce_admin.css" type="text/css">
 </head>
 <body>
     <!-------------- Header ---------------->
@@ -40,11 +40,23 @@
     </header>
     <br>
     <br>
+    <!----- Boutons modifier / supprimer / vendre / déconnexion ------->
+    <div class="d-flex justify-content-start mb-3">
+        <a href="#"><div class="p-2 bg modifier">Modifier</div></a>
+        <a href="#"><div class="p-2 bg supprimer">Supprimer</div></a>
+    </div>
+    <div class="d-flex justify-content-end mb-3">
+        <a href="#"><div class="p-2 bg vendre">Vendre</div></a>
+        <a href="#"><div class="p-2 bg deconnexion">Déconnexion</div></a>
+    </div>
+    <br>
+    <br>
+    <br>
     <!---------------- Section ---------------->
     <section>
         <h1>Titre annonce</h1>
 
-        <img src="img/4eme annonce.jpg" class="img-annonce" alt="appartement n°1">
+        <img src="img/2eme annonce.jpg" class="img-annonce" alt="appartement n°1">
 
         <aside>
             <div>

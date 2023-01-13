@@ -28,7 +28,7 @@ $announcementForm = new AnnouncementFormController($_POST);
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form methode="POST" action="">
+                    <form method="POST" action="">
                         <?php
                         echo $announcementForm->lastName('lastName');
                         echo $announcementForm->typeProperty('typeProperty');
