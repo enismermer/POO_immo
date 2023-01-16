@@ -1,10 +1,8 @@
 <?php
 require '../Controllers/RegisterFormController.php';
-
-
 $registerForm = new RegisterFormController($_POST);
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 

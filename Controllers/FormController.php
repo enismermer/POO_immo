@@ -57,5 +57,52 @@ public function log($email,  $password){
    }
 }
 
+public function addAnn($title, $propertyType, $surface, $description, $purchasePrice, $rentPrice, $adress, $postalCode, $saleDate, 
+    $propertyEmail, $propertyPhone, $picture){
+        if(isset($_POST['send'])){
+            if(!empty($_POST[$title]) && !empty($_POST[$propertyType]) && !empty($_POST[$surface])
+            && !empty($_POST[$description]) && !empty($_POST[$purchasePrice]) && !empty($_POST[$rentPrice]) 
+            && !empty($_POST[$adress]) && !empty($_POST[$postalCode]) && !empty($_POST[$saleDate]) 
+            && !empty($_POST[$propertyEmail]) 
+            && !empty($_POST[$propertyPhone])&& !empty($_POST[$picture])){
+               $title = htmlspecialchars($_POST[$title]);
+               $propertyType = htmlspecialchars($_POST[$propertyType]);
+               $surface = htmlspecialchars($_POST[$surface]);
+               $description = htmlspecialchars($_POST[$description]);
+               $purchasePrice = htmlspecialchars($_POST[$purchasePrice]);
+               $rentPrice = htmlspecialchars(($_POST[$rentPrice]));
+               $adress = htmlspecialchars($_POST[$adress]);
+               $postalCode = htmlspecialchars($_POST[$postalCode]);
+               $saleDate = htmlspecialchars($_POST[$saleDate]);
+               $propertyEmail = htmlspecialchars($_POST[$propertyEmail]);
+               $propertyPhone = htmlspecialchars($_POST[$propertyPhone]);
+               $picture = htmlspecialchars($_POST[$picture]);
+               
+               $sql = 'INSERT INTO annonce (titre, type_de_bien, surface, description, prix_achat, adresse, code_postal, date, email, telephone, prix_louage, image)
+               VALUES (:title, :propertyType, :surface, :description, :purchasePrice, :adress, :postalCode, :saleDate, :propertyEmail, :propertyPhone, :rentPrice, :picture )';
+               $bdd = db();
+               $query = $bdd->prepare($sql);
+               $query -> bindValue(':title', $title, PDO::PARAM_STR);
+               $query -> bindValue(':propertyType', $propertyType, PDO::PARAM_STR);
+               $query -> bindValue(':surface', $surface, PDO::PARAM_INT);
+               $query -> bindValue(':description', $description, PDO::PARAM_STR);
+               $query -> bindValue(':purchasePrice', $purchasePrice, PDO::PARAM_INT);
+               $query -> bindValue(':adress', $adress, PDO::PARAM_STR);
+               $query -> bindValue(':postalCode', $postalCode, PDO::PARAM_INT);
+               $query -> bindValue(':rentPrice', $rentPrice, PDO::PARAM_INT);
+               $query -> bindValue(':saleDate', $saleDate, PDO::PARAM_STR);
+               $query -> bindValue(':propertyEmail', $propertyEmail, PDO::PARAM_STR);
+               $query -> bindValue(':propertyPhone', $propertyPhone, PDO::PARAM_STR);
+               $query -> bindValue(':picture', $picture, PDO::PARAM_STR);
+               
+               $query -> execute();
+               header('Location:loginForm.php');
+       
+            }else{
+               echo "Veuillez remplir tous les champs";
+            }
+       }
+    }
+
 }
 ?>

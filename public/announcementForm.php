@@ -28,9 +28,9 @@ $announcementForm = new AnnouncementFormController($_POST);
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form method="POST" action="">
-                        <?php
-                        echo $announcementForm->lastName('');
+                    <?php
+                        echo $announcementForm->Announcement('title', 'propertyType', 'surface', 'description', 'purchasePrice', 'rentPrice', 'adress', 'postalCode', 'saleDate', 'propertyEmail', 'propertyPhone', 'picture');
+                        
                         ?>
                     </form>
                 </div>
