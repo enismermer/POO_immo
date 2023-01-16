@@ -1,7 +1,7 @@
 <?php
 require 'FormController.php';
 class RegisterFormController extends FormController{
-//champ nom
+
     public function Register($lastName , $firstName, $email, $password, $phone, $age, $sex){
         FormController::addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex);
         echo '

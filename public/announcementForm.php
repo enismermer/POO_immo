@@ -28,20 +28,8 @@ $announcementForm = new AnnouncementFormController($_POST);
         <div class="row">
             <div class="col">
                 <div class="registerBackColor">
-                    <form method="POST" action="">
-                        <?php
-                        echo $announcementForm->lastName('lastName');
-                        echo $announcementForm->typeProperty('typeProperty');
-                        echo $announcementForm->surface('surface');
-                        echo $announcementForm->desription('description');
-                        echo $announcementForm->price('price');
-                        echo $announcementForm->adress('adress');
-                        echo $announcementForm->postalCode('postalCode');
-                        echo $announcementForm->dateSale('dateSale');
-                        echo $announcementForm->propertyEmail('propertyEmail');
-                        echo $announcementForm->propertyPhone('propertyPhone');
-                        echo $announcementForm->picture('picture');
-                        echo $announcementForm->button('send');
+                    <?php
+                        echo $announcementForm->Announcement('title', 'propertyType', 'surface', 'description', 'purchasePrice', 'rentPrice', 'adress', 'postalCode', 'saleDate', 'propertyEmail', 'propertyPhone', 'picture');
                         ?>
                     </form>
                 </div>
