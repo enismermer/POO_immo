@@ -1,7 +1,16 @@
 <?php
+session_start();
 require('../config/BDConnexion.php');
-
+function pr($that, $exit = true) {
+   echo '<pre>';
+   print_r($that);
+   echo '</pre>';
+   if ($exit) {
+       exit;
+   }
+}
 class FormController{
+  
 public function addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex){
     if(isset($_POST['send'])){
      if(!empty($_POST[$lastName]) && !empty($_POST[$firstName]) && !empty($_POST[$email])
@@ -57,7 +66,7 @@ public function log($email,  $password){
    }
 }
 
-public function addAnn($title, $propertyType, $surface, $description, $purchasePrice, $rentPrice, $adress, $postalCode, $saleDate, 
+static function addAnn($title, $propertyType, $surface, $description, $purchasePrice, $rentPrice, $adress, $postalCode, $saleDate, 
     $propertyEmail, $propertyPhone, $picture){
         if(isset($_POST['send'])){
             if(!empty($_POST[$title]) && !empty($_POST[$propertyType]) && !empty($_POST[$surface])
@@ -96,12 +105,37 @@ public function addAnn($title, $propertyType, $surface, $description, $purchaseP
                $query -> bindValue(':picture', $picture, PDO::PARAM_STR);
                
                $query -> execute();
+               
+           
+
+               
                header('Location:loginForm.php');
        
             }else{
                echo "Veuillez remplir tous les champs";
             }
        }
+    }
+
+    static function recupAnnonce(){
+      $bdd = db();
+      $recupAnnonce = $bdd->prepare('SELECT * FROM annonce');
+      $recupAnnonce->execute();
+      $annonces = $recupAnnonce -> fetchAll();
+      return $annonces;
+    }
+
+    static function createAnnonce(){
+    
+      if(isset($_GET["id_annonce"]) && !empty($_GET["id_annonce"])){
+         $sql = 'SELECT * FROM annonce WHERE id = "'.$_GET["id_annonce"].'"';
+         $bdd = db();
+         $query = $bdd->prepare($sql);
+         $query = $bdd->query($sql);
+         $annonce = $query->fetch();
+        
+      }
+      
     }
 
 }

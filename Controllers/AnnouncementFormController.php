@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'FormController.php';
 class AnnouncementFormController extends FormController {
     

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../Controllers/RegisterFormController.php';
 $registerForm = new RegisterFormController($_POST);
 ?>
