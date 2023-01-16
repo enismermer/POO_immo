@@ -63,8 +63,7 @@ public function addAnn($title, $propertyType, $surface, $description, $purchaseP
             if(!empty($_POST[$title]) && !empty($_POST[$propertyType]) && !empty($_POST[$surface])
             && !empty($_POST[$description]) && !empty($_POST[$purchasePrice]) && !empty($_POST[$rentPrice]) 
             && !empty($_POST[$adress]) && !empty($_POST[$postalCode]) && !empty($_POST[$saleDate]) 
-            && !empty($_POST[$propertyEmail]) 
-            && !empty($_POST[$propertyPhone])&& !empty($_POST[$picture])){
+            && !empty($_POST[$propertyEmail]) && !empty($_POST[$propertyPhone])&& !empty($_POST[$picture])){
                $title = htmlspecialchars($_POST[$title]);
                $propertyType = htmlspecialchars($_POST[$propertyType]);
                $surface = htmlspecialchars($_POST[$surface]);
@@ -78,8 +77,8 @@ public function addAnn($title, $propertyType, $surface, $description, $purchaseP
                $propertyPhone = htmlspecialchars($_POST[$propertyPhone]);
                $picture = htmlspecialchars($_POST[$picture]);
                
-               $sql = 'INSERT INTO annonce (titre, type_de_bien, surface, description, prix_achat, prix_louage, adresse, code_postal, date, email, telephone, image)
-               VALUES (:title, :propertyType, :surface, :description, :purchasePrice, :adress, :postalCode, :saleDate, :propertyEmail, :propertyPhone, :rentPrice, :picture )';
+               $sql = 'INSERT INTO annonce (titre, type_de_bien, surface, description, prix_achat, adresse, code_postal, date, email, telephone, prix_louage, image)
+               VALUES (:title, :propertyType, :surface, :description, :purchasePrice, :adress, :postalCode, :saleDate, :propertyEmail, :propertyPhone, :rentPrice, :picture)';
                $bdd = db();
                $query = $bdd->prepare($sql);
                $query -> bindValue(':title', $title, PDO::PARAM_STR);
@@ -103,6 +102,4 @@ public function addAnn($title, $propertyType, $surface, $description, $purchaseP
             }
        }
     }
-
-}
 ?>

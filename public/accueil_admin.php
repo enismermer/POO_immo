@@ -1,5 +1,43 @@
+<!-- se connecter a la bdd  -->
+<!-- récuperer toutes les annonces -->
+<!-- stocker dans une variable les données -->
 <?php
+$data = [
+    [
+        "id_annonce" => 1,
+        "nom" => "Maison sur les quais",
+        "type_de_bien" => "maison",
+        "surface" => 150,
+        "description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui voluptatem commodi qui tenetur minus. ",
+        "prix_achat" => 120000,
+        "adresse" => "18 rue du lac",
+        "code_postal" => "38000",
+        "date" => "12/12/2023",
+        "email" => "toto@gmail.com",
+        "telephone" => "0708090706",
+        "prix_louage" => 15000,
+        "image" => "https://placeimg.com/640/480/architecture",
+        
+    ],
+    [
+        "id_annonce" => 2,
+        "nom" => "appartement sur la plage",
+        "type_de_bien" => "appartement",
+        "surface" => 70,
+        "description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui voluptatem commodi qui tenetur minus. ",
+        "prix_achat" => 1200000000,
+        "adresse" => "18 rue de la plage",
+        "code_postal" => "62120",
+        "date" => "01/12/2023",
+        "email" => "tata@gmail.com",
+        "telephone" => "0708090706",
+        "prix_louage" => 1500000000,
+        "image" => "https://placeimg.com/640/480/architecture",
+        
+    ]
+]
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -45,6 +83,15 @@
     </header>
     <br>
     <br>
+    <!-------------- Boutons modifier / supprimer ----------------->
+    <div class="d-flex justify-content-start">
+        <a href="#">
+            <div class="p-2 bg modifier">Modifier</div>
+        </a>
+        <a href="#">
+            <div class="p-2 bg supprimer">Supprimer</div>
+        </a>
+    </div>
     <!-------------- Boutons vendre / déconnexion ----------------->
     <div class="d-flex justify-content-end mb-3">
         <a href="./announcementForm.php">
@@ -60,109 +107,28 @@
     <!---------------- Section ---------------->
     <section>
         <!----------- 1ère ligne ------------>
-        <div class="d-flex justify-content-around">
-            <div class="card" style="width: 18rem;">
-                <a href="annonce123_admin.php" class="btn">
-                    <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
+        <div class="d-flex justify-content-around flex-wrap">
+            <?php
+        for($i = 0; $i <= 15; $i++){
+            foreach($data as $annonce){
+                
+            
+            
+            ?>
+
+            <div class="card" style="width: 20%; margin: 10px;">
+                <a href="annonce_single.php?id=<?php echo $annonce["id_annonce"]?>" class="btn">
+                    <img src=<?php echo $annonce["image"]; ?> class="card-img-top" alt="appartement n°1">
                     <div class="card-body">
-                        <h5 class="card-title">Appartement n°1</h5>
+                        <h5 class="card-title"><?php echo $annonce["nom"]?></h5>
                         <br>
-                        <h3>1515 €</h3>
+                        <h3> <?php echo $annonce["prix_achat"] ?>€</h3>
                     </div>
                 </a>
             </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce123_admin.php" class="btn">
-                    <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°2">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°2</h5>
-                        <br>
-                        <h3>1455 €</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce123_admin.php" class="btn">
-                    <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°3">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°3</h5>
-                        <br>
-                        <h3>1759 €</h3>
-                    </div>
-                </a>
-            </div>
-            </a>
+            <?php }} ?>
         </div>
-        <br>
-        <br>
-        <!----------- 2ème ligne ------------>
-        <div class="d-flex justify-content-around">
-            <div class="card" style="width: 18rem;">
-                <a href="annonce4_admin.php" class="btn">
-                    <img src="img/2eme annonce.jpg" class="card-img-top" alt="appartement n°3">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°4</h5>
-                        <br>
-                        <h3>2415 €</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce5_admin.php" class="btn">
-                    <img src="img/3eme annonce.jpg" class="card-img-top" alt="appartement n°4">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°5</h5>
-                        <br>
-                        <h3>2279 €</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce6_admin.php" class="btn">
-                    <img src="img/4eme annonce.jpg" class="card-img-top" alt="appartement n°5" style="height: 11em;">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°6</h5>
-                        <br>
-                        <h3>2829 €</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <br>
-        <br>
-        <!------------ 3eme ligne ------------>
-        <div class="d-flex justify-content-around">
-            <div class="card" style="width: 18rem;">
-                <a href="annonce789_admin.php" class="btn">
-                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°7</h5>
-                        <br>
-                        <h3>3689 €</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce789_admin.php" class="btn">
-                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°8</h5>
-                        <br>
-                        <h3>3549 €</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <a href="annonce789_admin.php" class="btn">
-                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-                    <div class="card-body">
-                        <h5 class="card-title">Appartement n°9</h5>
-                        <br>
-                        <h3>3729 €</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
+
     </section>
     <br>
     <br>

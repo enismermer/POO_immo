@@ -25,6 +25,32 @@ nav ul li {
     font-weight: bold;
 }
 
+/************ Bouton modifier / supprimer **********/
+
+.justify-content-start {
+    padding: 0 50px;
+}
+
+.justify-content-start .p-2 {
+    margin: 0 15px;
+    border-radius: 1em;
+}
+
+.justify-content-start a {
+    text-decoration: none;
+    color: black;
+}
+
+.modifier {
+    background-color: #3D39FD;
+    border-radius: 15px;
+}
+
+.supprimer {
+    background-color: #FD3939;
+    border-radius: 15px;
+}
+
 /************ Bouton vendre / déconnexion **********/
 
 .justify-content-end {
