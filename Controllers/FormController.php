@@ -76,17 +76,21 @@ public function addAnnounce($lastName, $typeProperty, $surface, $description, $p
        $picture = htmlspecialchars($_POST[$picture]);
 
 
-       $sql = 'INSERT INTO annonce(nom, type_de_bien, surface, description, prix_achat, prix_louage, sexe)
-       VALUES (:lastName, :firstName, :email, :password, :phone, :age, :sex)';
+       $sql = 'INSERT INTO annonce(nom, type_de_bien, surface, description, prix_achat, prix_louage, adresse, code_postal, date, email, telephone, image)
+       VALUES (:lastname, :type_property, :surface, :description, :price, :adress, :postalCode, :dateSale, :propertyEmail, :propertyPhone, :picture)';
        $bdd = db();
        $query = $bdd->prepare($sql);
        $query -> bindValue(':lastName', $lastName, PDO::PARAM_STR);
-       $query -> bindValue(':firstName', $firstName, PDO::PARAM_STR);
-       $query -> bindValue(':email', $email, PDO::PARAM_STR);
-       $query -> bindValue(':password', $password, PDO::PARAM_STR);
-       $query -> bindValue(':phone', $phone, PDO::PARAM_STR);
-       $query -> bindValue(':age', $age, PDO::PARAM_INT);
-       $query -> bindValue(':sex', $sex, PDO::PARAM_STR);
+       $query -> bindValue(':type_property', $typeProperty, PDO::PARAM_STR);
+       $query -> bindValue(':surface', $surface, PDO::PARAM_STR);
+       $query -> bindValue(':description', $description, PDO::PARAM_STR);
+       $query -> bindValue(':price', $price, PDO::PARAM_INT);
+       $query -> bindValue(':adress', $adress, PDO::PARAM_STR);
+       $query -> bindValue(':postalCode', $postalCode, PDO::PARAM_INT);
+       $query -> bindValue(':dateSale', $dateSale, PDO::PARAM_STR);
+       $query -> bindValue(':propertyEmail', $propertyEmail, PDO::PARAM_STR);
+       $query -> bindValue(':propertyPhone', $propertyPhone, PDO::PARAM_INT);
+       $query -> bindValue(':picture', $picture, PDO::PARAM_STR);
        
        $query -> execute();
        header('Location:loginForm.php');

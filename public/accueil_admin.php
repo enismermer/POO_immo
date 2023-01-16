@@ -1,42 +1,51 @@
+<?php
+session_start();
+    if(!$_SESSION['password']){
+        header('Location:loginForm.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POO Immo - Accueil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/accueil_admin.css" type="text/css">
 </head>
+
 <body>
     <!-------------- Header ---------------->
     <header>
-            <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
-            <!-------------- navigation ---------------->
-            <nav class="navbar navbar-expand-sm bg-light justify-content-center">
-                <div class="container-fluid">
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
+        <!-------------- navigation ---------------->
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Localisation</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Type de bien</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Surface min</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Budget</a>
-                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Localisation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Type de bien</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Surface min</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Budget</a>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="text" placeholder="Rechercher" aria-label="Search">
-                      <button class="btn btn-primary" type="submit">Rechercher</button>
+                        <input class="form-control me-2" type="text" placeholder="Rechercher" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Rechercher</button>
                     </form>
-                  </div>
                 </div>
-              </nav>
+            </div>
+        </nav>
     </header>
     <br>
     <br>
@@ -54,16 +63,16 @@
     <br>
     <!---------------- Section ---------------->
     <section>
-      <!----------- 1ère ligne ------------>
-      <div class="d-flex justify-content-around">
-        <div class="card" style="width: 18rem;">
-          <a href="annonce123_admin.php" class="btn">
-            <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°1</h5>
-              <br>
-              <h3>1515 €</h3>
-              </div>
+        <!----------- 1ère ligne ------------>
+        <div class="d-flex justify-content-around">
+            <div class="card" style="width: 18rem;">
+                <a href="annonce123_admin.php" class="btn">
+                    <img src="img/1re annonce.jpg" class="card-img-top" alt="appartement n°1">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°1</h5>
+                        <br>
+                        <h3>1515 €</h3>
+                    </div>
                 </a>
             </div>
             <div class="card" style="width: 18rem;">
@@ -86,78 +95,78 @@
                     </div>
                 </a>
             </div>
-          </a>
+            </a>
         </div>
         <br>
         <br>
-      <!----------- 2ème ligne ------------>
-      <div class="d-flex justify-content-around">
-        <div class="card" style="width: 18rem;">
-          <a href="annonce4_admin.php" class="btn">
-            <img src="img/2eme annonce.jpg" class="card-img-top" alt="appartement n°3">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°4</h5>
-              <br>
-              <h3>2415 €</h3>
+        <!----------- 2ème ligne ------------>
+        <div class="d-flex justify-content-around">
+            <div class="card" style="width: 18rem;">
+                <a href="annonce4_admin.php" class="btn">
+                    <img src="img/2eme annonce.jpg" class="card-img-top" alt="appartement n°3">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°4</h5>
+                        <br>
+                        <h3>2415 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce5_admin.php" class="btn">
-            <img src="img/3eme annonce.jpg" class="card-img-top" alt="appartement n°4">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°5</h5>
-              <br>
-              <h3>2279 €</h3>
+            <div class="card" style="width: 18rem;">
+                <a href="annonce5_admin.php" class="btn">
+                    <img src="img/3eme annonce.jpg" class="card-img-top" alt="appartement n°4">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°5</h5>
+                        <br>
+                        <h3>2279 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce6_admin.php" class="btn">
-            <img src="img/4eme annonce.jpg" class="card-img-top" alt="appartement n°5" style="height: 11em;">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°6</h5>
-              <br>
-              <h3>2829 €</h3>
+            <div class="card" style="width: 18rem;">
+                <a href="annonce6_admin.php" class="btn">
+                    <img src="img/4eme annonce.jpg" class="card-img-top" alt="appartement n°5" style="height: 11em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°6</h5>
+                        <br>
+                        <h3>2829 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
         </div>
-      </div>
-      <br>
-      <br>
-      <!------------ 3eme ligne ------------>
-      <div class="d-flex justify-content-around">
-        <div class="card" style="width: 18rem;">
-          <a href="annonce789_admin.php" class="btn">
-            <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°7</h5>
-              <br>
-              <h3>3689 €</h3>
+        <br>
+        <br>
+        <!------------ 3eme ligne ------------>
+        <div class="d-flex justify-content-around">
+            <div class="card" style="width: 18rem;">
+                <a href="annonce789_admin.php" class="btn">
+                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°7</h5>
+                        <br>
+                        <h3>3689 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce789_admin.php" class="btn">
-            <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°8</h5>
-              <br>
-              <h3>3549 €</h3>
+            <div class="card" style="width: 18rem;">
+                <a href="annonce789_admin.php" class="btn">
+                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°8</h5>
+                        <br>
+                        <h3>3549 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <a href="annonce789_admin.php" class="btn">
-            <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
-            <div class="card-body">
-              <h5 class="card-title">Appartement n°9</h5>
-              <br>
-              <h3>3729 €</h3>
+            <div class="card" style="width: 18rem;">
+                <a href="annonce789_admin.php" class="btn">
+                    <img src="img/5eme annonce.jpg" class="card-img-top" alt="appartement n°6">
+                    <div class="card-body">
+                        <h5 class="card-title">Appartement n°9</h5>
+                        <br>
+                        <h3>3729 €</h3>
+                    </div>
+                </a>
             </div>
-          </a>
         </div>
-      </div>
     </section>
     <br>
     <br>
@@ -167,6 +176,9 @@
             <p>© Copyright 2022 - POO Immo</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

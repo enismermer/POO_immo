@@ -31,7 +31,7 @@ section h1 {
 }
 
 .img-annonce {
-    width: 60%;
+    width: 70%;
     height: 28em;
     margin-left: 3%;
     border-radius: 20px;
@@ -64,6 +64,10 @@ aside button {
     border-radius: 2em;
 }
 
+form div {
+    padding: 20px;
+}
+
 /********** Description ***********/
 .description {
     background-color: #CBBDC8;
@@ -80,7 +84,7 @@ aside button {
     float: right;
     background-color: #09f16689;
     padding: 0 5% 90px 5%;
-    margin-right: 6%;
+    margin-right: 1%;
     border-radius: 2em;
     text-align: center;
 }
@@ -88,6 +92,12 @@ aside button {
 .choix button {
     padding: 8px 3em;
     border-radius: 2em;
+    background-color: #69B092; 
+    border: 1px solid #69B092;
+}
+
+.choix button span {
+    font-size: 30px;
 }
 
 
