@@ -3,48 +3,13 @@
 
 
 <?php
-$data = [
-[
-"id_annonce" => 1,
-"nom" => "Maison sur les quais",
-"type_de_bien" => "maison",
-"surface" => 150,
-"description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit
-blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui
-voluptatem commodi qui tenetur minus. ",
-"prix_achat" => 120000,
-"adresse" => "18 rue du lac",
-"code_postal" => "38000",
-"date" => "12/12/2023",
-"email" => "toto@gmail.com",
-"telephone" => "0708090706",
-"prix_louage" => 15000,
-"image" => "https://placeimg.com/640/480/arch",
-
-],
-[
-"id_annonce" => 2,
-"nom" => "appartement sur la plage",
-"type_de_bien" => "appartement",
-"surface" => 70,
-"description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit
-blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui
-voluptatem commodi qui tenetur minus. ",
-"prix_achat" => 1200000000,
-"adresse" => "18 rue de la plage",
-"code_postal" => "62120",
-"date" => "01/12/2023",
-"email" => "tata@gmail.com",
-"telephone" => "0708090706",
-"prix_louage" => 1500000000,
-"image" => "https://placeimg.com/640/480/arch",
-
-]
-]
+require '../Controllers/FormController.php';
+$annonce = FormController::createAnnonce();
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,11 +54,20 @@ voluptatem commodi qui tenetur minus. ",
 
     <!---------------- Section ---------------->
     <section style="margin-bottom: 3%;">
+        <div class=" d-flex justify-content-end mx-4 mt-3">
+            <?php if( isset($_SESSION['id']) && $_SESSION['id'] !== null ){ ?>
+            <a href=""><button type="button" class="btn btn-primary">Modifier</button></a>
+            <form action="../actions/delete.php?id=<?php echo $annonce["id_annonce"]?>" method="post">
+                <button type="submit" class="btn btn-danger ms-5" name="delete">Supprimer</button>
+            </form>
+            <?php } ?>
+        </div>
         <div class="row">
             <div class="col">
-                <h1><?php echo $data[$_GET["id"]-1]["nom"] ?></h1>
 
-                <img src="<?php echo $data[$_GET["id"]-1]["image"] ?>" class="img-annonce" alt="appartement n°1" style="margin-bottom: 10%; margin-left: 6%; width: 115%;">
+                <h1><?php echo $annonce["titre"] ?></h1>
+                <img src="<?php echo $annonce["image"] ?>" class="img-annonce" alt="appartement n°1"
+                    style="margin-bottom: 10%; margin-left: 6%; width: 115%;">
 
             </div>
             <div class="col">
@@ -114,34 +88,32 @@ voluptatem commodi qui tenetur minus. ",
                             <input type="tel" name="tel" required>
                         </div>
                         <div style="padding: 20px;">
-                        <button type="submit"><span style="font-size: 20px;">Envoyer</span></button>
+                            <button type="submit"><span style="font-size: 20px;">Envoyer</span></button>
                         </div>
                     </form>
                 </aside>
             </div>
         </div>
-        
+
 
         <div class="choix">
 
-            <h2>1515 €</h2>
+            <h2><?php echo $annonce["prix_achat"]?>€ / <?php echo $annonce["prix_louage"]?>€</h2>
+
 
             <button type="button"><span>Louer</span></button>
             <button type="button" style="background-color: #71E28A; border: 1px solid #71E28A;">
                 <span>Acheter</span></button>
         </div>
-        
+
         <div class="description" style="width: 56%;">
 
             <h3>Description</h3>
 
-            <p>Lorem ipsum dolor sit amet. Ea dolorem culpa est debitis aperiam sed quia voluptatem qui suscipit ipsam
-                ea galisum maxime aut eveniet nihil vel voluptatem impedit.
-
-
-                Vel tenetur consequuntur et optio officiis ut autem molestiae quo quidem velit qui praesentium quibusdam
-                rem delectus aliquid in quia esse. Sit cumque accusamus non rerum.
-            </p>
+            <p> Type de bien : <?php echo $annonce["type_de_bien"];?> </p>
+            <p> Adresse : <?php echo $annonce["adresse"];?> </p>
+            <p> Surface : <?php echo $annonce["surface"];?> m²</p>
+            <p> <?php echo $annonce["description"];?> </p>
         </div>
 
     </section>
@@ -155,4 +127,5 @@ voluptatem commodi qui tenetur minus. ",
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
 </body>
+
 </html>

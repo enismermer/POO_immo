@@ -59,7 +59,7 @@ public function log($email,  $password){
             $_SESSION[$password] = $password;
             $_SESSION['id'] = $recupUser->fetch()['id'];
         }
-        header('Location:accueil_admin.php');
+        header('Location:index.php');
       }else{
          echo "Veuillez remplir tous les champs";
       }
@@ -108,7 +108,7 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
            
 
                
-               header('Location:loginForm.php');
+               header('Location:index.php');
        
             }else{
                echo "Veuillez remplir tous les champs";
@@ -141,6 +141,22 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
       
     }
 
+    public function deleteAnn() {
+      if (empty($_GET['id']) || !ctype_digit($_GET['id'])) {
+         die("Ho ?! Tu n'as pas précisé l'id de l'article !");
+     }
+     $id = $_GET['id'];
+     $bdd = db();
+     $query = $bdd->prepare('SELECT * FROM annonce WHERE id_annonce = :id');
+     $query->execute(['id' => $id]);
+      if ($query->rowCount() === 0) {
+    die("L'article $id n'existe pas, vous ne pouvez donc pas le supprimer !");
+   }
+   $query = $bdd->prepare('DELETE FROM annonce WHERE id= :id');
+   $query->execute(['id' => $id]);
+     
+   header("Location: index.php");
+   }
 }
 
 

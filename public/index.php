@@ -2,7 +2,7 @@
 <!-- récuperer toutes les annonces -->
 <!-- stocker dans une variable les données -->
 <?php
-
+session_start();
 require '../Controllers/FormController.php';
 $annonces=FormController::recupAnnonce();
 
@@ -58,7 +58,9 @@ $annonces=FormController::recupAnnonce();
 <body>
     <!-------------- Header ---------------->
     <header>
-        <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
+        <a href="index.php">
+            <img src="img/POO Immo.png" class="img-thumbnail" alt="logo">
+        </a>
         <!-------------- navigation ---------------->
         <nav class="navbar navbar-expand-sm bg-light justify-content-center">
             <div class="container-fluid">
@@ -85,13 +87,26 @@ $annonces=FormController::recupAnnonce();
             </div>
         </nav>
     </header>
+
     <br>
     <br>
     <!-------------- Bouton connexion --------->
     <div class="d-flex justify-content-end mb-3">
+        <?php if( isset($_SESSION['id']) && $_SESSION['id'] !== null ){ ?>
+        <a href="../public/announcementForm.php"><button type="button" class="btn btn-secondary">Ajout
+                annonce</button></a>
+        <a href="../logout/logout.php"><button type="button" class="btn btn-success ms-5">Déconnexion</button></a>
+        <?php } else { ?>
+
         <a href="loginForm.php">
-            <div style="padding: 10px 3px;">Connexion</div>
+            <button type="button" class="btn btn-success ms-5">Connexion</button>
         </a>
+        <?php } ?>
+
+
+
+
+
     </div>
     <!---------------- Section ---------------->
     <section>
