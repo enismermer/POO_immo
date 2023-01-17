@@ -2,5 +2,5 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location:loginForm.php');
+header('Location:../public/loginForm.php');
 ?>

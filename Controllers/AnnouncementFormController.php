@@ -43,7 +43,7 @@ class AnnouncementFormController extends FormController {
         </div>
         <div class="row g-3 align-items-center mt-1">
         <div class="col-auto">
-            <label for="purchasePrice" class="col-form-label">Prix aheter(€) : </label>
+            <label for="purchasePrice" class="col-form-label">Prix acheter(€) : </label>
         </div>
         <div class="col-auto">
             <input type="number" id="purchasePrice" class="form-control" name="'.$purchasePrice.'">

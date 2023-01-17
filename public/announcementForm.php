@@ -30,7 +30,6 @@ $announcementForm = new AnnouncementFormController($_POST);
                 <div class="registerBackColor">
                     <?php
                         echo $announcementForm->Announcement('title', 'propertyType', 'surface', 'description', 'purchasePrice', 'rentPrice', 'adress', 'postalCode', 'saleDate', 'propertyEmail', 'propertyPhone', 'picture');
-                        
                         ?>
                     </form>
                 </div>

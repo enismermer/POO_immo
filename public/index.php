@@ -87,6 +87,12 @@ $annonces=FormController::recupAnnonce();
     </header>
     <br>
     <br>
+    <!-------------- Bouton connexion --------->
+    <div class="d-flex justify-content-end mb-3">
+        <a href="loginForm.php">
+            <div style="padding: 10px 3px;">Connexion</div>
+        </a>
+    </div>
     <!---------------- Section ---------------->
     <section>
         <div class="d-flex justify-content-around flex-wrap">
@@ -94,9 +100,11 @@ $annonces=FormController::recupAnnonce();
             foreach($annonces as $annonce){
                 ?>
 
-            <div class="card" style="width: 20%;">
-                <a href="annonce_single.php?id=<?php echo $annonce["annonce_id"]?>" class="btn">
-                    <img src=<?php echo $annonce["image"];?> class="card-img-top" alt="appartement n°1">
+
+
+            <div class="card" style="width: 20%; margin: 10px;">
+                <a href="annonce_single.php?id=<?php echo $annonce["id_annonce"]?>" class="btn">
+                    <img src=<?php echo $annonce["image"]; ?> class="card-img-top" alt="appartement n°1">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $annonce["titre"];?></h5>
                         <br>

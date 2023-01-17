@@ -10,12 +10,11 @@ function pr($that, $exit = true) {
    }
 }
 class FormController{
-  
 public function addRegister($lastName, $firstName, $email, $password, $phone, $age, $sex){
     if(isset($_POST['send'])){
      if(!empty($_POST[$lastName]) && !empty($_POST[$firstName]) && !empty($_POST[$email])
      && !empty($_POST[$password]) && !empty($_POST[$phone]) && !empty($_POST[$age]) 
-     && !empty($_POST[$sex])){
+     && !empty($_POST[$sex])) {
         $lastName = htmlspecialchars($_POST[$lastName]);
         $firstName = htmlspecialchars($_POST[$firstName]);
         $email = htmlspecialchars($_POST[$email]);
@@ -45,6 +44,7 @@ public function addRegister($lastName, $firstName, $email, $password, $phone, $a
 }
 
 }
+
 public function log($email,  $password){
    if(isset($_POST['send'])){
       if(!empty($_POST[$email]) && !empty($_POST[$password])){
@@ -72,8 +72,7 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
             if(!empty($_POST[$title]) && !empty($_POST[$propertyType]) && !empty($_POST[$surface])
             && !empty($_POST[$description]) && !empty($_POST[$purchasePrice]) && !empty($_POST[$rentPrice]) 
             && !empty($_POST[$adress]) && !empty($_POST[$postalCode]) && !empty($_POST[$saleDate]) 
-            && !empty($_POST[$propertyEmail]) 
-            && !empty($_POST[$propertyPhone])&& !empty($_POST[$picture])){
+            && !empty($_POST[$propertyEmail]) && !empty($_POST[$propertyPhone])&& !empty($_POST[$picture])){
                $title = htmlspecialchars($_POST[$title]);
                $propertyType = htmlspecialchars($_POST[$propertyType]);
                $surface = htmlspecialchars($_POST[$surface]);
@@ -88,7 +87,7 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
                $picture = htmlspecialchars($_POST[$picture]);
                
                $sql = 'INSERT INTO annonce (titre, type_de_bien, surface, description, prix_achat, adresse, code_postal, date, email, telephone, prix_louage, image)
-               VALUES (:title, :propertyType, :surface, :description, :purchasePrice, :adress, :postalCode, :saleDate, :propertyEmail, :propertyPhone, :rentPrice, :picture )';
+               VALUES (:title, :propertyType, :surface, :description, :purchasePrice, :adress, :postalCode, :saleDate, :propertyEmail, :propertyPhone, :rentPrice, :picture)';
                $bdd = db();
                $query = $bdd->prepare($sql);
                $query -> bindValue(':title', $title, PDO::PARAM_STR);
@@ -117,6 +116,9 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
        }
     }
 
+    
+   
+
     static function recupAnnonce(){
       $bdd = db();
       $recupAnnonce = $bdd->prepare('SELECT * FROM annonce');
@@ -127,16 +129,19 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
 
     static function createAnnonce(){
     
-      if(isset($_GET["id_annonce"]) && !empty($_GET["id_annonce"])){
-         $sql = 'SELECT * FROM annonce WHERE id = "'.$_GET["id_annonce"].'"';
+      if(isset($_GET["id"]) && !empty($_GET["id"])){
+         $sql = 'SELECT * FROM annonce WHERE id_annonce = "'.$_GET["id"].'"';
          $bdd = db();
          $query = $bdd->prepare($sql);
          $query = $bdd->query($sql);
          $annonce = $query->fetch();
         
       }
+      return $annonce;
       
     }
 
 }
+
+
 ?>
