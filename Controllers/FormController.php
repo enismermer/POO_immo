@@ -152,7 +152,7 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
       if ($query->rowCount() === 0) {
     die("L'article $id n'existe pas, vous ne pouvez donc pas le supprimer !");
    }
-   $query = $bdd->prepare('DELETE FROM annonce WHERE id= :id');
+   $query = $bdd->prepare('DELETE FROM annonce WHERE id_annonce= :id');
    $query->execute(['id' => $id]);
      
    header("Location: index.php");
