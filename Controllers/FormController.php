@@ -143,7 +143,6 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
 
     public function deleteAnn() {
       if (empty($_GET['id']) || !ctype_digit($_GET['id'])) {
-         die("Ho ?! Tu n'as pas précisé l'id de l'article !");
      }
      $id = $_GET['id'];
      $bdd = db();
@@ -155,7 +154,7 @@ static function addAnn($title, $propertyType, $surface, $description, $purchaseP
    $query = $bdd->prepare('DELETE FROM annonce WHERE id_annonce= :id');
    $query->execute(['id' => $id]);
      
-   header("Location: index.php");
+   header("Location: ../public/index.php");
    }
 }
 

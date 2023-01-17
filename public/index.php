@@ -2,44 +2,10 @@
 <!-- récuperer toutes les annonces -->
 <!-- stocker dans une variable les données -->
 <?php
-session_start();
 require '../Controllers/FormController.php';
 $annonces=FormController::recupAnnonce();
 
-// $data = [
-//     [
-//         "id_annonce" => 1,
-//         "nom" => "Maison sur les quais",
-//         "type_de_bien" => "maison",
-//         "surface" => 150,
-//         "description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui voluptatem commodi qui tenetur minus. ",
-//         "prix_achat" => 120000,
-//         "adresse" => "18 rue du lac",
-//         "code_postal" => "38000",
-//         "date" => "12/12/2023",
-//         "email" => "toto@gmail.com",
-//         "telephone" => "0708090706",
-//         "prix_louage" => 15000,
-//         "image" => "https://placeimg.com/640/480/arch",
-        
-//     ],
-//     [
-//         "id_annonce" => 2,
-//         "nom" => "appartement sur la plage",
-//         "type_de_bien" => "appartement",
-//         "surface" => 70,
-//         "description" => "Qui obcaecati quas non suscipit delectus in quam soluta quo iusto molestiae eos reprehenderit blanditiis et molestiae dolorem qui blanditiis obcaecati. Non ipsa quaerat sed eveniet ducimus sit molestiae quas qui voluptatem commodi qui tenetur minus. ",
-//         "prix_achat" => 1200000000,
-//         "adresse" => "18 rue de la plage",
-//         "code_postal" => "62120",
-//         "date" => "01/12/2023",
-//         "email" => "tata@gmail.com",
-//         "telephone" => "0708090706",
-//         "prix_louage" => 1500000000,
-//         "image" => "https://placeimg.com/640/480/arch",
-        
-//     ]
-// ]
+
 ?>
 
 <!DOCTYPE html>
